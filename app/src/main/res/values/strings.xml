@@ -6,4 +6,10 @@
     <string name="decrease_lp_25">Decrease LP (-25)</string>
     <string name="increase_lp_25">Increase LP (+25)</string>
     <string name="_4000">4000</string>
+    <string name="enter_lp_amount">Enter LP Amount</string>
+    <string name="DecreaseLPCustom">Enter amount to decrease</string>
+    <string name="enter_amount_of_lp_to_increase">Enter Amount of LP to Increase</string>
+    <string name="enter_amount_of_lp_to_decrease">Enter amount of LP to decrease</string>
+    <string name="submit_lp2">Submit LP</string>
+    <string name="submit_lp">Submit LP</string>
 </resources>

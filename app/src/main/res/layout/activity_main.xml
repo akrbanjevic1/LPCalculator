@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F44336"
+    android:background="#9B0724"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/DecreaseLP100"
         android:layout_width="182dp"
         android:layout_height="93dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:background="#9C27B0"
         android:fontFamily="sans-serif-light"
         android:onClick="DecreaseLP100"
@@ -72,10 +72,78 @@
         android:text="@string/_4000"
         android:textSize="100sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/DecreaseLP25"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/DecreaseLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:inputType="textShortMessage|number"
+        android:imeOptions="actionDone"
+        android:hint="@string/enter_amount_of_lp_to_decrease"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/LP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DecreaseLP100" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/submit_lp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/LP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DecreaseLP" />
+
+    <EditText
+        android:id="@+id/IncreaseLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/enter_amount_of_lp_to_increase"
+        android:inputType="textShortMessage|number"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/DecreaseLP25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LP" />
+
+    <Button
+        android:id="@+id/Submit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/submit_lp2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/IncreaseLP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LP" />
+
 
 </android.support.constraint.ConstraintLayout>
