@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">LP Calculator</string>
-    <string name="decrease_lp_100">Decrease LP (-100)</string>
-    <string name="increase_lp_100">Increase LP (+100)</string>
+    <string name="decrease_lp_100">-LP (100)</string>
+    <string name="increase_lp_100">+LP (100)</string>
     <string name="enter_your_starting_life_points">Enter your starting Life Points</string>
-    <string name="decrease_lp_25">Decrease LP (-25)</string>
-    <string name="increase_lp_25">Increase LP (+25)</string>
+    <string name="decrease_lp_25">-LP (-25)</string>
+    <string name="increase_lp_25">+LP (+25)</string>
     <string name="_4000">4000</string>
     <string name="enter_lp_amount">Enter LP Amount</string>
     <string name="DecreaseLPCustom">Enter amount to decrease</string>
