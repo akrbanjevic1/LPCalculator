@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.LPCalculator.COINFLIP";
 //Instantiating the Variables needed here
@@ -104,8 +106,20 @@ public class MainActivity extends AppCompatActivity {
     //using the putExtra method, carries with it the EXTRA_MESSAGE key and a string that says heads
     public void coinFlip(View view) {
         Intent intent = new Intent(this,CoinActivity.class);
-        String message = "Heads!";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        Random rand = new Random();
+        int rand1 = rand.nextInt(3);
+        String message;
+        //Here, I am instantiating a random number to help output either heads or tails
+        //upon every click of "CoinFlip". If divided by 2, and the remainder is 0, then it will be
+        //heads, and the string "Heads!" is placed into message and the putExtra method.
+        if(rand1 % 2 == 0) {
+            message = "Heads!";
+            intent.putExtra(EXTRA_MESSAGE, message);
+        }
+        if(rand1 % 2 > 0) {
+            message = "Tails!";
+            intent.putExtra(EXTRA_MESSAGE, message);
+        }
         startActivity(intent);
     }
 }
