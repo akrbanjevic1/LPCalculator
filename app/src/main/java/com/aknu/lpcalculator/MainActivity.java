@@ -1,6 +1,7 @@
 package com.aknu.lpcalculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,14 +9,17 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "com.example.LPCalculator.COINFLIP";
 //Instantiating the Variables needed here
     private int mLifePoints = 4000;
     private TextView mShowLP;
     private EditText mEdit;
     private EditText mEdit2;
+    private EditText editText;
     private Button mButton;
     private Button mButton2;
     private String value;
@@ -32,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         mEdit = findViewById(R.id.DecreaseLP);
         mButton2 = findViewById(R.id.Submit2);
         mEdit2 =  findViewById(R.id.IncreaseLP);
-
 
         mButton.setOnClickListener(
                 new View.OnClickListener()
@@ -97,5 +100,12 @@ public class MainActivity extends AppCompatActivity {
             mShowLP.setText(Integer.toString(mLifePoints));
         }
     }
-
+    //This method is being used to flip a coin in the second activity. An intent is made that,
+    //using the putExtra method, carries with it the EXTRA_MESSAGE key and a string that says heads
+    public void coinFlip(View view) {
+        Intent intent = new Intent(this,CoinActivity.class);
+        String message = "Heads!";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 }
