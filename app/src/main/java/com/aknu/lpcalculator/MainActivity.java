@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.LPCalculator.COINFLIP";
-//Instantiating the Variables needed here
+    //Instantiating the Variables needed here
     private int mLifePoints = 4000;
     private TextView mShowLP;
     private EditText mEdit;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private int LPVal;
     private int LPVal2;
 
-//So far, we have the creation of the mShowLP TextView view here
+    //So far, we have the creation of the mShowLP TextView view here
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,18 +37,16 @@ public class MainActivity extends AppCompatActivity {
         mButton = findViewById(R.id.Submit);
         mEdit = findViewById(R.id.DecreaseLP);
         mButton2 = findViewById(R.id.Submit2);
-        mEdit2 =  findViewById(R.id.IncreaseLP);
+        mEdit2 = findViewById(R.id.IncreaseLP);
 
         mButton.setOnClickListener(
-                new View.OnClickListener()
-                {
+                new View.OnClickListener() {
                     //Here, we are making a listener to listen for button click.
                     //If the user DOES click after inputting a value, then it will
                     //cast it to an int (LPVal)
                     //Next, mLifePoints subtracts that value, and if it's not 0,
                     //Then it will set it's text to that
-                    public void onClick(View view)
-                    {
+                    public void onClick(View view) {
                         //Log.v("EditText",mEdit.getText().toString());
                         value = mEdit.getText().toString();
                         LPVal2 = new Integer(value).intValue();
@@ -59,10 +57,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         mButton2.setOnClickListener(
-                new View.OnClickListener()
-                {
-                    public void onClick(View view)
-                    {
+                new View.OnClickListener() {
+                    public void onClick(View view) {
                         value = mEdit2.getText().toString();
                         LPVal = new Integer(value).intValue();
                         mLifePoints += LPVal;
@@ -73,50 +69,55 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-//From here until the end, our buttons are decreasing the LP in increments whenever they are clicked
+    //From here until the end, our buttons are decreasing the LP in increments whenever they are
+    // clicked
     @SuppressLint("SetTextI18n")
     public void DecreaseLP100(View view) {
         mLifePoints -= 100;
-        if(mShowLP != null) {
+        if (mShowLP != null) {
             mShowLP.setText(Integer.toString(mLifePoints));
         }
     }
-//Increments of 100 Increase
+
+    //Increments of 100 Increase
     public void IncreaseLP100(View view) {
         mLifePoints += 100;
-        if(mShowLP != null) {
-            mShowLP.setText (Integer.toString(mLifePoints));
+        if (mShowLP != null) {
+            mShowLP.setText(Integer.toString(mLifePoints));
         }
     }
-//Increments of 25 Decrease
+
+    //Increments of 25 Decrease
     public void DecreaseLP25(View view) {
         mLifePoints -= 25;
-        if(mShowLP != null) {
+        if (mShowLP != null) {
             mShowLP.setText(Integer.toString(mLifePoints));
         }
     }
-//Increments of 25 Increase
+
+    //Increments of 25 Increase
     public void IncreaseLP25(View view) {
         mLifePoints += 25;
-        if(mShowLP != null) {
+        if (mShowLP != null) {
             mShowLP.setText(Integer.toString(mLifePoints));
         }
     }
+
     //This method is being used to flip a coin in the second activity. An intent is made that,
     //using the putExtra method, carries with it the EXTRA_MESSAGE key and a string that says heads
     public void coinFlip(View view) {
-        Intent intent = new Intent(this,CoinActivity.class);
+        Intent intent = new Intent(this, CoinActivity.class);
         Random rand = new Random();
-        int rand1 = rand.nextInt(3);
+        int rand1 = rand.nextInt(7);
         String message;
         //Here, I am instantiating a random number to help output either heads or tails
         //upon every click of "CoinFlip". If divided by 2, and the remainder is 0, then it will be
         //heads, and the string "Heads!" is placed into message and the putExtra method.
-        if(rand1 % 2 == 0) {
+        if (rand1 % 2 == 0) {
             message = "Heads!";
             intent.putExtra(EXTRA_MESSAGE, message);
         }
-        if(rand1 % 2 > 0) {
+        if (rand1 % 2 > 0) {
             message = "Tails!";
             intent.putExtra(EXTRA_MESSAGE, message);
         }

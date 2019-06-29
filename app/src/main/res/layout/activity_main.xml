@@ -65,23 +65,24 @@
 
     <TextView
         android:id="@+id/LP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="119dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#6076A8"
-        android:fontFamily="sans-serif-light"
+        android:background="@drawable/lpbackground"
+        android:fontFamily="sans-serif-black"
         android:text="@string/_4000"
+        android:textColor="#BBB57A"
         android:textSize="100sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/DecreaseLP25"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661"
+        app:layout_constraintVertical_bias="0.625"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -99,10 +100,13 @@
         android:inputType="textShortMessage|number"
         android:textAlignment="center"
         android:textColor="#F44336"
+        android:textColorHint="#F44346"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/LP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DecreaseLP100" />
+        app:layout_constraintTop_toBottomOf="@+id/DecreaseLP100"
+        app:layout_constraintVertical_bias="0.486" />
 
     <Button
         android:id="@+id/Submit"
@@ -128,14 +132,17 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:hint="@string/enter_amount_of_lp_to_increase"
+        android:textColorHint="#F44346"
         android:inputType="textShortMessage|number"
         android:textAlignment="center"
         android:textColor="#F44336"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/DecreaseLP25"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LP" />
+        app:layout_constraintTop_toBottomOf="@+id/LP"
+        app:layout_constraintVertical_bias="0.688" />
 
     <Button
         android:id="@+id/Submit2"
@@ -158,7 +165,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:onClick="coinFlip"
-        android:text="CoinFlip"
+        android:text="@string/coinflip"
         android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/IncreaseLP100"
         app:layout_constraintTop_toTopOf="parent" />

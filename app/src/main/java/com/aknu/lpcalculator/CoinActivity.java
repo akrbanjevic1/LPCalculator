@@ -25,7 +25,7 @@ public class CoinActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.coinPic);
         //The ImageView by default will display the heads image. I have made it so that if the
         //message that the intent passes is equal to "Tails!", then it will display the tails image.
-        if(message.equals("Tails!")) {
+        if (message.equals("Tails!")) {
             imageView.setImageResource(R.drawable.tail);
         }
     }
