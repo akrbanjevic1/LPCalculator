@@ -35,6 +35,7 @@ It features a MainActivity with lots of information on it (in the form of differ
  results were achieved using:
  
  A Pixel Emulator (API 26)
+ and 
  A Galaxy S5
  
  Thanks for taking the time to look at my application; I hope that you enjoy it 
